@@ -1,3 +1,10 @@
+"use strict";
+exports.__esModule = true;
+var readline = require("readline");
+var rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
 var secondLargest = function (array) {
     if (array.length < 2) {
         return null;
@@ -22,3 +29,8 @@ var secondLargest = function (array) {
     }
     return b;
 };
+rl.on('line', function (answer) {
+    console.log(secondLargest(answer));
+    rl.close();
+    process.stdin.destroy();
+});

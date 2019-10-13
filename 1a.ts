@@ -1,4 +1,11 @@
 
+import * as readline from 'readline';
+
+let rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+})
+
 let secondLargest = function(array: number[]): number {
     if (array.length < 2) {
         return null;
@@ -27,3 +34,9 @@ let secondLargest = function(array: number[]): number {
 
     return b;
 }
+
+rl.on('line', function (answer: number[]) {
+    console.log(secondLargest(answer));
+    rl.close();
+    process.stdin.destroy();
+})
