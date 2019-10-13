@@ -35,8 +35,22 @@ let secondLargest = function(array: number[]): number {
     return b;
 }
 
-rl.on('line', function (answer: number[]) {
-    console.log(secondLargest(answer));
+let n: number;
+let array1: number[] = [];
+
+rl.question("How long is your array? ", function (answer) {
+    n = Number(answer);
     rl.close();
-    process.stdin.destroy();
+    // process.stdin.destroy();
 })
+
+for (let i = 0; i<n; i++) {
+    rl.question("What is the next number in your array?", function(answer) {
+        array1.push(Number(answer));
+        rl.close();
+        // process.stdin.destroy();
+    })
+}
+
+console.log(secondLargest(array1));
+
