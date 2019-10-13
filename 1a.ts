@@ -27,3 +27,5 @@ let secondLargest = function(array: number[]): number {
 
     return b;
 }
+
+export = {secondLargest: secondLargest};

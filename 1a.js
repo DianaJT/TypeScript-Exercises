@@ -1,3 +1,4 @@
+"use strict";
 var secondLargest = function (array) {
     if (array.length < 2) {
         return null;
@@ -22,3 +23,4 @@ var secondLargest = function (array) {
     }
     return b;
 };
+module.exports = { secondLargest: secondLargest };
