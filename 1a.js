@@ -34,13 +34,13 @@ var array1 = [];
 rl.question("How long is your array? ", function (answer) {
     n = Number(answer);
     rl.close();
-    process.stdin.destroy();
+    // process.stdin.destroy();
 });
 for (var i = 0; i < n; i++) {
     rl.question("What is the next number in your array?", function (answer) {
         array1.push(Number(answer));
         rl.close();
-        process.stdin.destroy();
+        // process.stdin.destroy();
     });
 }
 console.log(secondLargest(array1));
